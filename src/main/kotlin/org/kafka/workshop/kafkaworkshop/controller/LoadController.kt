@@ -19,7 +19,7 @@ class LoadController(val kafkaProducer: KafkaProducer) {
     }
 
     companion object {
-        const val MAX_MESSAGES = 1000
+        const val MAX_MESSAGES = 100
     }
 
     private fun executeStringPublisher() {

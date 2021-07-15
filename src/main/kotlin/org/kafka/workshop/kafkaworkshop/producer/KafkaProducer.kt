@@ -49,12 +49,12 @@ class KafkaProcessCallback<T>(
 ) : ListenableFutureCallback<SendResult<String, T>> {
     private val log = LoggerFactory.getLogger(KafkaProcessCallback::class.java)
     override fun onSuccess(result: SendResult<String, T>?) {
-        log.info(
-                "Message [{}] delivered with offset {} and partition {}",
-                message,
-                result!!.recordMetadata.offset(),
-                result.recordMetadata.partition()
-        )
+//        log.info(
+//                "Message [{}] delivered with offset {} and partition {}",
+//                message,
+//                result!!.recordMetadata.offset(),
+//                result.recordMetadata.partition()
+//        )
     }
 
     override fun onFailure(ex: Throwable) {

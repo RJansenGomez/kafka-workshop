@@ -36,6 +36,8 @@ class KafkaConsumerConfig {
         val avroProps: MutableMap<String, Any> = HashMap()
         avroProps[ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG] = KafkaProducerConfig.BOOTSTRAP_SERVER
         avroProps["schema.registry.url"] = KafkaProducerConfig.SCHEMA_URL
+        avroProps[ConsumerConfig.AUTO_OFFSET_RESET_CONFIG] =  "earliest"
+        avroProps["specific.avro.reader"] = "true"
         avroProps[ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG] = KafkaAvroDeserializer::class.java
         avroProps[ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG] = KafkaAvroDeserializer::class.java
         return DefaultKafkaConsumerFactory(avroProps)
