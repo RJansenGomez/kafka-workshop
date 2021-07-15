@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "AvroTest",
+  "namespace": "workshop.kafka.avro",
+  "fields": [
+    {
+      "name": "event",
+      "type": "string"
+    },
+    {
+      "name": "market",
+      "type": "string"
+    },
+    {
+      "name": "platformId",
+      "type": "string"
+    },
+    {
+      "name": "source",
+      "type": "string"
+    },
+    {
+          "name": "content",
+          "type": "workshop.kafka.avro.AvroTestContent"
+        }
+        ]
+}

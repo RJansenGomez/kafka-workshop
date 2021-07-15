@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "AvroTestContent",
+  "namespace": "workshop.kafka.avro",
+  "fields": [
+    {
+      "name": "contentEvent",
+      "type": "string"
+    },
+    {
+      "name": "contentMarket",
+      "type": "string"
+    },
+    {
+      "name": "contentPlatformId",
+      "type": "string"
+    },
+    {
+      "name": "contentSource",
+      "type": "string"
+    }]
+}
